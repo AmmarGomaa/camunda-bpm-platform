@@ -26,17 +26,23 @@ const Controller = [
   'Notifications',
   '$translate',
   '$location',
+  'hasPlugin',
   function(
     camAPI,
     $modalInstance,
     $scope,
     Notifications,
     $translate,
-    $location
+    $location,
+    hasPlugin
   ) {
     const resource = camAPI.resource($scope.resource);
+    const hasBatchOperationPlugin = hasPlugin(
+      'cockpit.navigation',
+      'batch_operation'
+    );
     $scope.showLinkToBatchProcess =
-      $scope.$parent?.resource !== 'case-definition';
+      hasBatchOperationPlugin && $scope.$parent?.resource !== 'case-definition';
     $scope.status = null;
     $scope.mode = 'UPDATE';
     $scope.ttl = $scope.definition.historyTimeToLive;
