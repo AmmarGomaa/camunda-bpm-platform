@@ -9,9 +9,10 @@
     <div class="no-task well">
       <span class="glyphicon glyphicon-info-sign"></span>
       {{ 'SELECT_TASK_IN_LIST' | translate }}
+      <span>Test Static</span>
+      <div cam-esri-map-plugin></div>
     </div>
   </div>
-
   <section ng-if="task"
            class="task-card"
            ng-class="{'task-removed': !taskExists}">

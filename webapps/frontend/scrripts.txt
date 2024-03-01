@@ -1,0 +1,9 @@
+cd E:\Projects\AAQ\Spatial Workflow\Camonda\Sources\Engine\7.13
+start.bat
+
+cd E:\Projects\Github\camunda-bpm-platform\webapps\frontend
+npm start
+
+
+http://localhost:8081/camunda/app/tasklist/default/#/?searchQuery=%5B%5D
+http://localhost:8081/camunda/app/cockpit/default/#/dashboard

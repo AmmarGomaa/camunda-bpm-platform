@@ -24,6 +24,7 @@ var angular = require('camunda-commons-ui/vendor/angular'),
   camTaskGroupsCtrl = require('./controller/cam-tasklist-task-groups-ctrl'),
   /* detail plugins */
   camTaskDetailFormPlugin = require('./plugins/detail/cam-tasklist-task-detail-form-plugin'),
+  esriMapPlugin = require('./plugins/esri-map/cam-esri-map-plugin'),
   camTaskDetailHistoryPlugin = require('./plugins/detail/cam-tasklist-task-detail-history-plugin'),
   camTaskDetailDiagramPlugin = require('./plugins/detail/cam-tasklist-task-detail-diagram-plugin'),
   camTaskDetailDescriptionPlugin = require('./plugins/detail/cam-tasklist-task-detail-description-plugin'),
@@ -64,6 +65,7 @@ taskModule.controller('camTaskGroupsCtrl', camTaskGroupsCtrl);
 /* detail plugins */
 taskModule.config(camTaskDetailFormPlugin);
 taskModule.config(camTaskDetailHistoryPlugin);
+taskModule.config(esriMapPlugin);
 taskModule.config(camTaskDetailDiagramPlugin);
 taskModule.config(camTaskDetailDescriptionPlugin);
 
